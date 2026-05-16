@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useRef, MouseEvent } from 'react';
+import { useRef, type CSSProperties, type MouseEvent } from 'react';
 import { MoodWorld } from '@/lib/types';
 
 export function MoodWorldCard({ world }: { world: MoodWorld }) {
@@ -31,7 +31,7 @@ export function MoodWorldCard({ world }: { world: MoodWorld }) {
         {
           // CSS custom properties consumed by ::before / ::after
           ['--still' as string]: world.still,
-        } as React.CSSProperties
+        } as CSSProperties
       }
     >
       {/* Atmospheric still — always visible, deepens on hover */}
